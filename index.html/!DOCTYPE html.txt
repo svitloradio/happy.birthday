@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Desktop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENTER SCREEN
+    ========================== -->
+
+    <div id="enter-screen" class="screen">
+
+        <div class="enter-content">
+
+            <h1>WELCOME</h1>
+
+            <p>click to enter</p>
+
+            <button id="enter-button">
+                ENTER
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         LOADING SCREEN
+    ========================== -->
+
+    <div id="loading-screen" class="screen hidden">
+
+        <div class="loading-content">
+
+            <p>loading...</p>
+
+            <div class="loading-bar">
+                <div id="loading-progress"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DESKTOP
+    ========================== -->
+
+    <main id="desktop" class="hidden">
+
+        <!-- FOLDERS -->
+
+        <div class="folder"
+             style="left: 10%; top: 15%;"
+             onclick="openWindow('about-window')">
+
+            <img src="assets/folder1.png" alt="About">
+
+            <span>About</span>
+
+        </div>
+
+
+        <div class="folder"
+             style="left: 25%; top: 15%;"
+             onclick="openWindow('photos-window')">
+
+            <img src="assets/folder2.png" alt="Photos">
+
+            <span>Photos</span>
+
+        </div>
+
+
+        <div class="folder"
+             style="left: 40%; top: 15%;"
+             onclick="openWindow('music-window')">
+
+            <img src="assets/folder3.png" alt="Music">
+
+            <span>Music</span>
+
+        </div>
+
+
+        <!-- ABOUT WINDOW -->
+
+        <div id="about-window" class="window">
+
+            <div class="window-header">
+
+                <span>About</span>
+
+                <button onclick="closeWindow('about-window')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <h2>About</h2>
+
+                <p>
+                    Welcome to my desktop.
+                </p>
+
+                <p>
+                    You can put whatever you want in this window.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTOS WINDOW -->
+
+        <div id="photos-window" class="window">
+
+            <div class="window-header">
+
+                <span>Photos</span>
+
+                <button onclick="closeWindow('photos-window')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <h2>Photos</h2>
+
+                <p>
+                    Your photos can go here.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MUSIC WINDOW -->
+
+        <div id="music-window" class="window">
+
+            <div class="window-header">
+
+                <span>Music</span>
+
+                <button onclick="closeWindow('music-window')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <h2>Music</h2>
+
+                <p>
+                    Your music can go here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
